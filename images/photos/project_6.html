@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Photography</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/sliders.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;900&display=swap" rel="stylesheet">
+</head>
+
+<nav>
+  <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  </nav> 
+
+    <body>
+      <h2> Photography</h2>
+        <p class="slider-paragraph">These are just some photos I took form my photography class and some that I took for myself durning my travels. </p>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="/images/photos/frame.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="/images/photos/relationship.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="/images/photos/FictionalPortrait.jpg">
+          </div>
+            
+          <div class="mySlides fade">
+            <img src="/images/photos/Composited Portrait.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="/images/photos/Longexposure.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/images/photos/bulls.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/images/photos/cows.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/images/photos/Italyjpg.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/images/photos/analogous.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="/images/photos/complementary.jpg">
+          </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span> 
+              <span class="dot" onclick="currentSlide(7)"></span> 
+              <span class="dot" onclick="currentSlide(8)"></span> 
+              <span class="dot" onclick="currentSlide(9)"></span> 
+              <span class="dot" onclick="currentSlide(10)"></span> 
+            </div>
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Barcelos Rooster</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/sliders.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;900&display=swap" rel="stylesheet">
+    </head>
+
+    <nav>
+      <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>     
+
+    <body>
+        <h2>Barcelos Rooster</h2>
+        <p class="slider-paragraph">This project was made for one of my classes the object is the
+           Barcelos rooster. The Barcelos Rooster is a  symbol in the Portuguese community representing good luck. On the top is the name of the object, in the middle is the greater of the object, and on the bottom is the year it was created. 
+          </p>
+          <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+              <img src="/images/rooster/Rooster3 copy.jpg" >
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="/images/rooster/colorroster.png" >
+            </div>
+            
+            <div class="mySlides fade">
+             <img src="/images/rooster/whiteRooster.jpg" >
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>

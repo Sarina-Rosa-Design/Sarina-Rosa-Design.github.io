@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Flight Tracker</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/sliders.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;900&display=swap" rel="stylesheet">
+</head>
+
+<nav>
+  <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  </nav> 
+
+    <body>
+      <h2> Flight Tracker</h2>
+        <p class="slider-paragraph">FlightTracker was designed for a class with the idea of using one aspect of GPS/navigation. I used the idea of helping one find there way to their flight gate/terminal as my navigation/GPS. to complete the assessment I put it all together in a animated poster.</p>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/video (video-converter.com).mov">
+          </div>
+         
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/poster.png">
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/termalmap.png">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/map.png">
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/screen1.png">
+          </div>  
+
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/screen2.png">
+          </div>  
+
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/screen3.jpg">
+          </div> 
+
+          <div class="mySlides fade">
+            <img src="/images/flighttracker/screen4.png">
+          </div>  
+ 
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span> 
+              <span class="dot" onclick="currentSlide(7)"></span> 
+              <span class="dot" onclick="currentSlide(8)"></span> 
+            </div>
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>
